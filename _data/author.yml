@@ -1,0 +1,16 @@
+name: Eric Wohllaib
+# GitHub serves your current avatar at this URL; swap for any image URL you like.
+dp: https://github.com/ericwoh.png
+description: "
+  <p>
+    Graphics programmer. Real-time rendering, Vulkan, Slang, and game engine development.
+  </p>
+"
+# Each entry uses assets/icons/<title>.png unless it gives an explicit `icon:` path.
+# Theme-provided PNGs: github, linkedin, twitter, email, dev, instagram, telegram.
+contact:
+  - title: linkedin
+    url: https://www.linkedin.com/in/ericwoh/
+  - title: bluesky
+    url: https://bsky.app/profile/ericwoh.bsky.social
+    icon: assets/icons/bluesky.svg

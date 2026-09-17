@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <main>
+      {% include header.html %} {% include bio.html %}
+      {% if site.posts.size > 0 %}<h2 class="section-title posts-title">Posts</h2>{% endif %}
+      <section class="articles">
+        {% for post in site.posts %}
+        <article class="article">
+          <h2 class="article-title">
+            <a href="{{site.baseurl}}{{post.url}}"> {{post.title}} </a>
+          </h2>
+          <small class="date">{{post.date | date_to_string}}</small>
+          <div class="categories">
+            {% for c in post.categories %}
+            <a href="#!" data-base-url="{{site.baseurl}}" class="category"
+              >{{c}}</a
+            >
+            {% endfor %}
+          </div>
+        </article>
+        {%endfor%}
+      </section>
+      {% include external-posts.html %}
+      {% include publications.html %}
+      {% include footer.html %}
+    </main>
+    {% include category-modal.html%}
+  </body>
+</html>

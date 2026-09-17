@@ -1,0 +1,17 @@
+{% if site.data.external_posts and site.data.external_posts.size > 0 %}
+<section class="link-section" id="external-posts">
+  <h2 class="section-title">Writing elsewhere</h2>
+  <ul class="link-list">
+    {% for item in site.data.external_posts %}
+    <li class="link-item">
+      <a class="link-title" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+      <span class="link-meta">
+        {%- if item.site %}{{ item.site }}{% endif -%}
+        {%- if item.site and item.date %} &middot; {% endif -%}
+        {%- if item.date %}{{ item.date | date: "%b %Y" }}{% endif -%}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

@@ -1,0 +1,27 @@
+{% if site.data.publications and site.data.publications.size > 0 %}
+<section class="link-section" id="publications">
+  <h2 class="section-title">Publications</h2>
+  <ul class="link-list">
+    {% for pub in site.data.publications %}
+    <li class="link-item">
+      {% if pub.url %}
+      <a class="link-title" href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+      {% else %}
+      <span class="link-title">{{ pub.title }}</span>
+      {% endif %}
+      {% if pub.authors %}<span class="link-authors">{{ pub.authors }}</span>{% endif %}
+      {%- assign yr = pub.year | append: "" -%}
+      {%- if pub.venue contains yr %}{% assign show_year = false %}{% else %}{% assign show_year = true %}{% endif -%}
+      <span class="link-meta">
+        {%- if pub.venue %}{{ pub.venue }}{% endif -%}
+        {%- if pub.venue and pub.year and show_year %}, {% endif -%}
+        {%- if pub.year and show_year %}{{ pub.year }}{% endif -%}
+        {%- for l in pub.links %}
+        &middot; <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.title }}</a>
+        {%- endfor -%}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

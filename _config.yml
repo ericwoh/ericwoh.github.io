@@ -1,0 +1,45 @@
+title: EricWoh Blog
+description: >-
+  Graphics programming notes: Vulkan, Slang, real-time rendering, and the tooling around it.
+markdown: kramdown
+
+# `url` is needed for absolute links in sitemap.xml / feed.xml. No `baseurl`: the site is at the domain root and
+# the Pages workflow passes --baseurl on the command line anyway.
+url: "https://ericwoh.github.io"
+
+# for atom feed
+author:
+  name: Eric Wohllaib
+
+plugins:
+  - jemoji
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections_dir: all_collections
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      permalink: /posts/:title/
+  # drafts (jekyll serve --drafts) get the same treatment so previews look like the real thing
+  - scope:
+      path: "_drafts"
+    values:
+      layout: "post"
+      permalink: /posts/:title/
+
+exclude:
+  - sitemap.xml
+  - feed.xml
+  - LICENSE-theme
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

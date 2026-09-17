@@ -1,0 +1,16 @@
+<section id="bio">
+  <section id="img-wrapper">
+    <img src="{{site.data.author.dp}}" alt="" />
+  </section>
+  <section id="bio-wrapper">
+    <div id="text-wrapper">{{site.data.author.description}}</div>
+    <div id="social-wrapper">
+      {% for i in site.data.author.contact %}
+      {% if i.icon %}{% assign icon = i.icon %}{% else %}{% assign icon = "assets/icons/" | append: i.title | append: ".png" %}{% endif %}
+      <a href="{{i.url}}" target="_blank" title="{{i.title}}">
+        <img src="{{site.baseurl}}/{{icon}}" alt="{{i.title}}" />
+      </a>
+      {%endfor%}
+    </div>
+  </section>
+</section>

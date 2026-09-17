@@ -1,0 +1,33 @@
+# Papers, talks, book chapters. Rendered on the front page under "Publications";
+# the section is hidden while this list is empty.
+#
+# - title: Title of the paper or talk
+#   authors: A. Author, B. Author       # optional
+#   venue: GDC 2024 / SIGGRAPH 2023 / GPU Zen 3 ...
+#   year: 2024
+#   url: https://example.com/main-link  # optional; makes the title a link
+#   links:                              # optional extra links, shown after the venue
+#     - title: pdf
+#       url: https://example.com/paper.pdf
+#     - title: slides
+#       url: https://example.com/slides.pdf
+#     - title: video
+#       url: https://youtube.com/...
+#
+- title: Ambient Diffuse Lighting in 'Ghost of Yōtei'
+  venue: GDC 2026
+  year: 2026
+  url: https://gdcvault.com/play/1035740/Ambient-Diffuse-Lighting-in-Ghost
+  links:
+    - title: GDC Vault
+      url: https://gdcvault.com/play/1035740/Ambient-Diffuse-Lighting-in-Ghost
+
+- title: Procedural Grass in 'Ghost of Tsushima'
+  venue: GDC 2021, Advanced Graphics Summit
+  year: 2021
+  url: https://www.youtube.com/watch?v=Ibe1JBF5i5Y
+  links:
+    - title: YouTube
+      url: https://www.youtube.com/watch?v=Ibe1JBF5i5Y
+    - title: GDC Vault
+      url: https://gdcvault.com/play/1027033/Advanced-Graphics-Summit-Procedural-Grass
